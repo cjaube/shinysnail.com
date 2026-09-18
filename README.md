@@ -97,7 +97,7 @@ Global styles are located in `src/styles/global.css`:
 
 ### GitHub Pages
 
-Pushes to `master` are deployed automatically by the GitHub Actions workflow in
+Pushes to `main` are deployed automatically by the GitHub Actions workflow in
 `.github/workflows/deploy.yml`. The workflow installs dependencies, builds the
 static site into `dist/`, and publishes that directory with GitHub Pages.
 
