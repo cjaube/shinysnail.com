@@ -4,9 +4,7 @@ A link-in-bio page built with **Astro** and **TailwindCSS**. It renders your pro
 
 ![LinkyTree Preview](https://s3.us-east-1.amazonaws.com/gndx.dev/linkyTree.png)
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gndx/linkytree)
-
-**Live at:** [linkytree.error427.com](https://linkytree.error427.com)
+**Live at:** [shinysnail.com](https://shinysnail.com)
 
 ## Stack
 
@@ -97,70 +95,18 @@ Global styles are located in `src/styles/global.css`:
 
 ## Deploy
 
-### Cloudflare Workers
+### GitHub Pages
 
-This project is configured to deploy to Cloudflare Workers using the `wrangler.jsonc` file. The deployment is static, which means the site is completely generated at build time and doesn't require a runtime server.
+Pushes to `master` are deployed automatically by the GitHub Actions workflow in
+`.github/workflows/deploy.yml`. The workflow installs dependencies, builds the
+static site into `dist/`, and publishes that directory with GitHub Pages.
 
-#### Why is it static?
+To enable deployment for the repository:
 
-- **Performance**: The site is served as static files from Cloudflare's CDN
-- **Cost**: No server or runtime costs
-- **Scalability**: The CDN automatically handles traffic without needing to scale servers
-- **Security**: Smaller attack surface with no server-side processes
-
-#### Name Configuration
-
-To change the deployment name, edit the `name` field in `wrangler.jsonc`:
-
-```jsonc
-{
-  "name": "your-name-here",
-  // ... other configurations
-}
-```
-
-#### Static Files and .assetsignore
-
-The `public/.assetsignore` file controls which files are excluded from static assets:
-
-```
-# dist/.assetsignore
-_worker.js
-_routes.json
-```
-
-These files are excluded because they are internal Workers configuration files that don't need to be served as static assets.
-
-#### Deployment Instructions
-
-1. **Install Wrangler CLI** (if you don't have it):
-
-   ```bash
-   npm install -g wrangler
-   ```
-
-2. **Authenticate with Cloudflare**:
-
-   ```bash
-   wrangler auth login
-   ```
-
-3. **Build the project**:
-
-   ```bash
-   npm run build
-   ```
-
-4. **Deploy to Workers**:
-   ```bash
-   wrangler deploy
-   ```
-
-The site will be available at `https://your-name.workers.dev` or your custom domain if you configured one.
-
-### Other Static Providers
-
-The build output is static (`dist/` folder), so you can also deploy to any static hosting provider (Netlify, Vercel, Cloudflare Pages, GitHub Pages, etc.).
+1. Open **Settings > Pages** on GitHub.
+2. Set **Source** to **GitHub Actions**.
+3. Configure `shinysnail.com` as a custom domain if the repository should use
+   the existing domain.
 
 ## 💻 Contributing
 
