@@ -15,7 +15,7 @@ export type SiteLinkCard = {
 
 export const site = {
   seo: {
-    title: 'Shiny Snail @shinysnailLLC',
+    title: 'Shiny Snail',
     ogTitle: 'Shiny Snail',
     twitterTitle: 'Shiny Snail',
     description:
