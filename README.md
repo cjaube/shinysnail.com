@@ -1,8 +1,8 @@
-# LinkyTree
+# ShinySnail.com
 
 A link-in-bio page built with **Astro** and **TailwindCSS**. It renders your profile, social links, and link cards from a single data file.
 
-![LinkyTree Preview](https://s3.us-east-1.amazonaws.com/gndx.dev/linkyTree.png)
+Built from [LinkyTree](https://github.com/gndx/linkytree)
 
 **Live at:** [shinysnail.com](https://shinysnail.com)
 
@@ -108,23 +108,6 @@ To enable deployment for the repository:
 3. Configure `shinysnail.com` as a custom domain if the repository should use
    the existing domain.
 
-## 💻 Contributing
-
-Contributions to this project are welcome. If you find a bug or have a suggestion for improvement, please open an issue or submit a pull request.
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 ## 📃 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## ☕ Support
-
-If this project helped you learn something new, or if you're feeling particularly generous, you can buy me a coffee. It's greatly appreciated! 😊 [GitHub Sponsors](https://github.com/sponsors/gndx)
